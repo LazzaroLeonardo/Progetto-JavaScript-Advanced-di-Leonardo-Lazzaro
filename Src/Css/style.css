@@ -1,0 +1,253 @@
+/* Reset di base */
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Assicura che il padding e il bordo siano inclusi nella larghezza e nell'altezza totali dell'elemento */ /* Ensures that padding and border are included in element's total width and height */
+}
+
+/* Stili per il corpo della pagina */
+/* Styles for the page body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Carattere principale */ /* Primary font */
+    background-color: #f0f4f8; /* Colore di sfondo */ /* Background color */
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */  /* Centers horizontally */
+    align-items: center;     /* Centra verticalmente */  /* Centers vertically */
+    min-height: 100vh;       /* Utilizza l'intera altezza della finestra */ /* Uses the full height of the window */
+    padding: 20px;
+    flex-direction: column;
+    color: #333; /* Colore del testo */ /* Text color */
+    text-align: center;      /* Allinea il testo al centro */ /* Aligns text to the center */
+}
+
+/* Contenitore principale centrato */
+/* Centered main container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      /* Centra orizzontalmente */ /* Centers horizontally */
+    width: 100%;
+    max-width: 600px;         /* Limita la larghezza massima */ /* Limits maximum width */
+    margin: 0 auto;           /* Garantisce il centraggio del contenitore */ /* Ensures centering of the container */
+}
+
+/* Header della pagina */
+/* Page header */
+header {
+    background-color: #4a90e2; /* Colore di sfondo dell'intestazione */ /* Background color of the header */
+    color: white; /* Colore del testo */ /* Text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    width: 100%; /* Fa sì che copra l'intera larghezza */ /* Makes it span the full width */
+}
+
+/* Barra di ricerca */
+/* Search bar */
+.search-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Stile per il campo di input */
+/* Style for the input field */
+input[type="text"] {
+    padding: 12px;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 250px;
+    max-width: 100%;  /* Si adatta alla larghezza disponibile */ /* Adapts to available width */
+}
+
+/* Focus sul campo di input */
+/* Focus on the input field */
+input[type="text"]:focus {
+    border-color: #357ab7;
+}
+
+/* Stile per il bottone di ricerca */
+/* Style for the search button */
+button {
+    padding: 12px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+/* Hover sul bottone */
+/* Hover on the button */
+button:hover {
+    background-color: #357ab7;
+}
+
+/* Loader (nascosto di default) */
+/* Loader (hidden by default) */
+#loader {
+    display: block; /* Visibile di default */ /* Visible by default */
+    text-align: center;
+    color: #4a90e2;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Classe per nascondere gli elementi */
+/* Class to hide elements */
+.hidden {
+    display: none !important; /* Forza gli elementi a essere nascosti */ /* Forces elements to be hidden */
+}
+
+/* Stile per i risultati della ricerca */
+/* Style for search results */
+#results {
+    display: flex;
+    flex-direction: column; /* Displays books in a vertical list */ /* Displays books in a vertical list */
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: center; /* Utilizzare justify-content per il layout flessibile */ /* Use justify-content for flex layout */
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* Box libro */
+/* Book box */
+.book {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 400px; /* Larghezza aumentata per il desktop */ /* Increased width for desktop */
+    position: relative;  /* Necessario per il posizionamento assoluto del pulsante di chiusura */ /* Necessary for the absolute positioning of the close button */
+    box-sizing: border-box; /* Include imbottitura e bordo nelle dimensioni totali */ /* Includes padding and border in total dimensions */
+}
+
+/* Hover sul box libro */
+/* Hover on the book box */
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulsante X */
+/* X Button */
+.close-button {
+    background-color: red;
+    position: absolute;
+    top: 10px;  /* Posiziona il pulsante vicino all'angolo in alto a destra */ /* Places the button near the top-right corner */
+    right: 10px; /* Allinea il pulsante a destra */ /* Aligns button to the right */
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* Hover sul pulsante X */
+/* Hover on the X button */
+.close-button:hover {
+    background-color: darkred;
+}
+
+/* Titolo del libro */
+/* Book Title */
+.book-title {
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-right: 30px;  /* Aggiunto spazio a destra per il pulsante di chiusura */ /* Added space on the right for the close button */
+}
+
+/* Pulsante per descrizione */
+/* Button for description */
+.desc-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Hover sul pulsante per descrizione */
+/* Hover on button for description */
+.desc-button:hover {
+    background-color: #357ab7;
+}
+
+/* Stile per la descrizione */
+/* Style for description */
+.description {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaf4fc;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animazione per la descrizione */
+/* Animation for description */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Messaggi di errore */
+/* Error messages */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive per schermi piccoli */
+/* Responsive for small screens */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    button {
+        padding: 10px;
+    }
+    input[type="text"] {
+        padding: 10px;
+        width: 100%;
+    }
+    #results {
+        align-items: stretch; /* Fa sì che le caselle dei libri si estendano a tutta larghezza su schermi piccoli */ /* Makes the book boxes stretch to full width on small screens */
+    }
+}
+
+/* Responsive per schermi tablet e più grandi */
+/* Responsive for tablet and larger screens */
+@media (max-width: 768px) {
+    .book {
+        max-width: 100%; /* Fa sì che la casella del libro si estenda a tutta larghezza sugli schermi dei tablet */ /* Makes the book box stretch to full width on tablet screens */
+    }
+    .main-container {
+        max-width: 500px; /* Regola la dimensione del contenitore per schermi medi */ /* Adjust the container size for medium screens */
+    }
+}

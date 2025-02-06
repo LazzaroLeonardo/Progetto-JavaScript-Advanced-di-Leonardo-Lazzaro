@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookFinder - Ricerca Libri</title>
+    <link rel="stylesheet" href="./Src/Css/style.css">
+    <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.ico">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="counter" />
+    <meta property="og:url" content="https://lazzaroleonardo.github.io/ProgettoCounterLeonardoLazzaro/" />
+    <meta property="og:title" content="Javascript counter" />
+    <meta property="og:description" content="Javascript counter che simula un contatore di numeri che li incrementa e decrementa" />
+    <meta property="og:image" content="https://lazzaroleonardo.github.io/ProgettoCounterLeonardoLazzaro/Assets/Images/meta.png" />
+</head>
+<body>
+
+    <!-- Contenitore principale per la centratura -->
+     <!-- Main container for centering -->
+    <div class="main-container">
+        <!-- Header della pagina -->
+         <!-- Page Header -->
+        <header>
+            <h1>📚 BookFinder</h1>
+        </header>
+
+        <!-- Barra di ricerca per cercare i libri -->
+        <!-- Search bar to search for books -->
+        <div class="search-container">
+            <input type="text" id="category" placeholder="Cerca per categoria (es: fantasy, history)">
+            <button onclick="searchBooks()">🔍 Cerca</button>
+        </div>
+    </div>
+
+    <!-- Loader (inizialmente nascosto) -->
+    <!-- Loader (initially hidden) -->
+    <div id="loader" class="hidden">Caricamento in corso...</div>
+
+    <!-- Div per visualizzare i risultati della ricerca -->
+     <!-- Div to display search results -->
+    <div id="results"></div>
+
+    <script src="./Src/Js/script.js"></script>
+</body>
+</html>
