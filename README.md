@@ -33,4 +33,4 @@ Non è necessario nessun requisito per poter far funzionare il counter.
 ## Dove testare il counter
 Per provare il counter:
 
-[Counter Javascript](https://lazzaroleonardo.github.io/ProgettoCounterLeonardoLazzaro/ "Pagina dove provare il Counter Javascript")
+[Book Finder Javascript](https://lazzaroleonardo.github.io/Progetto-JavaScript-Advanced-di-Leonardo-Lazzaro/ "Pagina dove provare il Book Finder Javascript")
